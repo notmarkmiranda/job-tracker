@@ -34,5 +34,5 @@ ActiveRecord::Schema.define(version: 20161214181533) do
 
   add_index "jobs", ["company_id"], name: "index_jobs_on_company_id", using: :btree
 
-  add_foreign_key "jobs", "companies"
+  add_foreign_key "jobs", "companies", on_delete: :cascade
 end
